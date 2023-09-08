@@ -1,8 +1,10 @@
+const dotenv = require("dotenv");
 const Web3 = require("web3");
 const abi = require("./abi.js");
 const fs = require("fs");
 const zlib = require("zlib");
 
+dotenv.config();
 // Initialize Web3 instance
 const web3 = new Web3(
 	process.env.INFURA_URL || process.env.ALCHEMY_URL || "http://localhost:8545"
